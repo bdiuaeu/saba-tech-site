@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | شركة سبأ للتكنولوجيا والابتكار</title>
+    <!-- خطوط Google Fonts (Cairo & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4DBC;
+            --accent-gold: #D4AF37;
+            --dark-bg: #1E293B;
+            --gray-text: #6B7280;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-bg);
+            line-height: 1.7;
+        }
+        /* شريط التنقل العلوي */
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-area i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo-text span {
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+        /* رأس الصفحة الداخلية */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(10,77,188,0.9));
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .page-header h2 span {
+            color: var(--accent-gold);
+        }
+        .page-header p {
+            color: #E2E8F0;
+            font-size: 16px;
+        }
+        /* محتوى الصفحة */
+        .section {
+            padding: 80px 5%;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .about-text h3 {
+            font-size: 28px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .about-text p {
+            color: var(--gray-text);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        /* بطاقات الرؤية والرسالة */
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .vm-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+            text-align: center;
+        }
+        .vm-card i {
+            font-size: 45px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        .vm-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            font-weight: 700;
+        }
+        .vm-card p {
+            color: var(--gray-text);
+            font-size: 15px;
+        }
+        /* التذييل */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+        footer p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر القائد -->
+    <header>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="logo-text">
+                <h1>شركة سبأ للتكنولوجيا والابتكار</h1>
+                <span>SABA TECHNOLOGY & INNOVATION CO.</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html" class="active">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="projects.html">الابتكارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- رأس الصفحة -->
+    <section class="page-header">
+        <h2>تعرّف على <span>شركة سبأ</span></h2>
+        <p>نبتكر حلولاً رقمية مستدامة لنقود المستقبل التقني بعزم وثبات</p>
+    </section>
+
+    <!-- تفاصيل عن الشركة -->
+    <section class="section">
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>منظومة تقنية رائدة في صناعة المستقبل الرقمي</h3>
+                <p>تعتبر شركة سبأ للتكنولوجيا والابتكار صرحاً تقنياً متقدماً يهدف إلى تقديم أحدث الحلول البرمجية والذكية للمؤسسات والشركات. نؤمن بأن الابتكار هو عصب التطور الحديث، ولذلك نسخر أحدث التقنيات العالمية لبناء أنظمة آمنة، ذكية، وذات كفاءة تشغيلية عالية.</p>
+                <p>نعمل بمعايير هندسية صارمة تجمع بين مرونة التطوير وقوة الحماية السيبرانية، لنضمن لعملائنا ريادة مطلقة في أسواقهم الرقمية.</p>
+            </div>
+            <div class="vision-mission-grid" style="grid-template-columns: 1fr;">
+                <div class="vm-card" style="border-top-color: var(--primary-blue);">
+                    <i class="fa-solid fa-eye"></i>
+                    <h4>رؤيتنا</h4>
+                    <p>أن نكون شركة رائدة في تقديم حلول تقنية مبتكرة ومستدامة للمساهمة في بناء مستقبل ذكي.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="vision-mission-grid">
+            <div class="vm-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h4>رسالتنا</h4>
+                <p>نقدم حلولاً تقنية متطورة تواكب احتياجات عملائنا وتحقق لهم التميز والريادة.</p>
+            </div>
+            <div class="vm-card" style="border-top-color: var(--primary-blue);">
+                <i class="fa-solid fa-gem"></i>
+                <h4>قيمنا الجوهرية</h4>
+                <p>الابتكار المستمر، الجودة العالية، الأمان المطلق، والالتزام بمعايير الاحترافية الهندسية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
+    </footer>
+
+</body>
+</html>
