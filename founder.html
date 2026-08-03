@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رئيس مجلس الإدارة والمؤسس | شركة سبأ للتكنولوجيا والابتكار</title>
+    <!-- خطوط Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4DBC;
+            --accent-gold: #D4AF37;
+            --dark-bg: #1E293B;
+            --gray-text: #4B5563;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-bg);
+            line-height: 1.8;
+        }
+        /* شريط التنقل العلوي */
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-area i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo-text span {
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+        /* رأس الصفحة الداخلية */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(10,77,188,0.9));
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .page-header h2 span {
+            color: var(--accent-gold);
+        }
+        .page-header p {
+            color: #E2E8F0;
+            font-size: 16px;
+        }
+        /* قسم المحتوى الرئيسي للمؤسس */
+        .founder-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .founder-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            overflow: hidden;
+            border-top: 5px solid var(--accent-gold);
+        }
+        @media (max-width: 900px) {
+            .founder-card {
+                grid-template-columns: 1fr;
+            }
+        }
+        .founder-img-area {
+            background: linear-gradient(135deg, #1E293B, #0A4DBC);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .founder-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold);
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background-color: #334155;
+        }
+        .founder-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .founder-img-area h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .founder-img-area span {
+            font-size: 14px;
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .founder-contact-meta {
+            width: 100%;
+            text-align: right;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .founder-contact-meta p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #E2E8F0;
+        }
+        .founder-contact-meta p i {
+            color: var(--accent-gold);
+        }
+        .founder-content {
+            padding: 50px;
+        }
+        .founder-content h3 {
+            font-size: 26px;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E2E8F0;
+        }
+        .founder-content h3 span {
+            color: var(--primary-blue);
+        }
+        .founder-content p {
+            font-size: 16px;
+            color: var(--gray-text);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .vision-box {
+            background: #F1F5F9;
+            border-right: 4px solid var(--primary-blue);
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .vision-box h4 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .vision-box p {
+            font-size: 15px;
+            color: var(--dark-bg);
+            margin-bottom: 0;
+            font-style: italic;
+        }
+        /* التذييل */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+            margin-top: 60px;
+        }
+        footer p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="logo-text">
+                <h1>شركة سبأ للتكنولوجيا والابتكار</h1>
+                <span>SABA TECHNOLOGY & INNOVATION CO.</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="founder.html" class="active">المؤسس</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="projects.html">الابتكارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- رأس الصفحة -->
+    <section class="page-header">
+        <h2>رئيس مجلس الإدارة والمؤسس <span>القيادة والرؤية</span></h2>
+        <p>تعرف على القيادة الاستراتيجية والمؤسس لشركة سبأ للتكنولوجيا والابتكار</p>
+    </section>
+
+    <!-- بطاقة المؤسس -->
+    <section class="founder-section">
+        <div class="founder-card">
+            <!-- الجانب الأيمن: الصورة والبيانات الشخصية -->
+            <div class="founder-img-area">
+                <div class="founder-avatar">
+                    <!-- اسم ملف الصورة الذي رفعته -->
+                    <img src="founder.jpg" alt="العز عبدالسلام السبئي">
+                </div>
+                <h3>العز عبدالسلام السبئي</h3>
+                <span>رئيس مجلس الإدارة والمؤسس</span>
+                
+                <div class="founder-contact-meta">
+                    <p><i class="fa-solid fa-envelope"></i> lyslymlyy778@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +967737844548</p>
+                    <p><i class="fa-solid fa-location-dot"></i> الجمهورية اليمنية</p>
+                </div>
+            </div>
+
+            <!-- الجانب الأيسر: السيرة والكلمة الاستراتيجية -->
+            <div class="founder-content">
+                <h3>كلمة المؤسس <span>ورئيس مجلس الإدارة</span></h3>
+                <p>
+                    "تأسست شركة سبأ للتكنولوجيا والابتكار لتكون منارة رقمية رائدة تنطلق من جذور حضارية عميقة نحو أفق تقني واسع ومتطور. نؤمن في قيادة الشركة أن التكنولوجيا ليست مجرد أدوات، بل هي الأساس الحقيقي لصناعة المستقبل، وتحسين جودة الحياة، ودعم مسيرة التنمية المستدامة في اليمن والمنطقة."
+                </p>
+                <p>
+                    تحت إشراف مباشر وخطط استراتيجية متقدمة، نعمل باستمرار على توظيف أحدث الابتكارات البرمجية، وتطوير البنى التحتية الرقمية الأمنية، وبناء شراكات فاعلة تضع العميل والمجتمع التقني في صدارة أولوياتنا.
+                </p>
+
+                <div class="vision-box">
+                    <h4>الرؤية القيادية المستقبلية</h4>
+                    <p>"قيادة التحول الرقمي بذكاء واحترافية، وتأسيس منظومة تقنية متكاملة تضاهي المعايير العالمية من قلب الجمهورية اليمنية."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.) - بإدارة المؤسس: العز عبدالسلام السبئي</p>
+    </footer>
+
+</body>
+</html>
