@@ -137,6 +137,12 @@
         .info-item div p {
             font-size: 14px;
             color: var(--gray-text);
+            direction: ltr;
+            text-align: right;
+        }
+        .info-item div p.arabic-text {
+            direction: rtl;
+            text-align: right;
         }
         /* نموذج المراسلة */
         .contact-form {
@@ -230,7 +236,7 @@
     <!-- رأس الصفحة -->
     <section class="page-header">
         <h2>تواصل معنا <span>نحن في خدمتكم</span></h2>
-        <p>نرحب بتواصلكم واستفساراتكم التقنية لبناء شراكات استراتيجية ناجحة</p>
+        <p>نرحب بتواصلكم والاستفسارات التقنية مع إدارة الشركة لبناء شراكات استراتيجية ناجحة</p>
     </section>
 
     <!-- معلومات التواصل ونموذج المراسلة -->
@@ -238,40 +244,47 @@
         <div class="contact-container">
             <!-- معلومات المقر -->
             <div class="contact-info">
-                <h3>معلومات الاتصال</h3>
+                <h3>معلومات الاتصال الرسمية</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <div>
+                        <h4>رئيس مجلس الإدارة والمؤسس</h4>
+                        <p class="arabic-text">العز عبدالسلام السبئي</p>
+                    </div>
+                </div>
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <h4>المقر الرئيسي</h4>
-                        <p>صنعاء، الجمهورية اليمنية</p>
+                        <p class="arabic-text">الجمهورية اليمنية</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <h4>البريد الإلكتروني</h4>
-                        <p>info@sabatech.com</p>
+                        <p>lyslymlyy778@gmail.com</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <h4>رقم الهاتف</h4>
-                        <p>+967 770 123 456</p>
+                        <p>+967737844548</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-clock"></i>
                     <div>
                         <h4>أوقات العمل</h4>
-                        <p>الأثنين - الجمعة (9:00 ص - 5:00 م)</p>
+                        <p class="arabic-text">الأثنين - الجمعة (9:00 ص - 5:00 م)</p>
                     </div>
                 </div>
             </div>
 
             <!-- النموذج التفاعلي -->
             <div class="contact-form">
-                <h3>أرسل استفسارك</h3>
+                <h3>أرسل رسالة مباشرة للإدارة</h3>
                 <form>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="الاسم الكريم" required>
@@ -293,7 +306,7 @@
 
     <!-- التذييل -->
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.) - بإدارة المؤسس: العز عبدالسلام السبئي</p>
     </footer>
 
 </body>
