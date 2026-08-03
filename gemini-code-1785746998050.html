@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات والحلول | شركة سبأ للتكنولوجيا والابتكار</title>
+    <!-- خطوط Google Fonts (Cairo & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4DBC;
+            --accent-gold: #D4AF37;
+            --dark-bg: #1E293B;
+            --gray-text: #6B7280;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-bg);
+            line-height: 1.7;
+        }
+        /* شريط التنقل العلوي */
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-area i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo-text span {
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+        /* رأس الصفحة الداخلية */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(10,77,188,0.9));
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .page-header h2 span {
+            color: var(--accent-gold);
+        }
+        .page-header p {
+            color: #E2E8F0;
+            font-size: 16px;
+        }
+        /* محتوى الخدمات */
+        .section {
+            padding: 80px 5%;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h3 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .section-title p {
+            color: var(--gray-text);
+            font-size: 16px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-blue);
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .service-card i {
+            font-size: 40px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        .service-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            font-weight: 700;
+        }
+        .service-card p {
+            color: var(--gray-text);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .service-list {
+            list-style: none;
+        }
+        .service-list li {
+            font-size: 14px;
+            color: var(--dark-bg);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-list li i {
+            font-size: 12px;
+            color: var(--primary-blue);
+            margin-bottom: 0;
+        }
+        /* التذييل */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+        footer p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر القائد -->
+    <header>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="logo-text">
+                <h1>شركة سبأ للتكنولوجيا والابتكار</h1>
+                <span>SABA TECHNOLOGY & INNOVATION CO.</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html" class="active">الخدمات</a></li>
+                <li><a href="projects.html">الابتكارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- رأس الصفحة -->
+    <section class="page-header">
+        <h2>خدماتنا وحلولنا <span>التقنية المتقدمة</span></h2>
+        <p>نقدم حزمة متكاملة من الحلول المصممة خصيصاً لترقية البُنى التحتية وتمكين ريادة الأعمال</p>
+    </section>
+
+    <!-- قائمة الخدمات -->
+    <section class="section">
+        <div class="section-title">
+            <h3>حلول هندسية بمعايير عالمية</h3>
+            <p>نلبي تطلعات المؤسسات عبر تكنولوجيا ذكية وموثوقة</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-brain"></i>
+                <h4>الذكاء الاصطناعي وتحليل البيانات</h4>
+                <p>نمكن المؤسسات من استثمار بياناتها الضخمة لاتخاذ قرارات دقيقة وسريعة عبر نماذج تعلم آلي متطورة.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> تطوير خوارزميات التنبؤ وتحليل الأنماط</li>
+                    <li><i class="fa-solid fa-check"></i> نظم الأتمتة الذكية للعمليات</li>
+                    <li><i class="fa-solid fa-check"></i> لوحات مؤشرات الأداء الحية (Dashboards)</li>
+                </ul>
+            </div>
+            <div class="service-card" style="border-top-color: var(--accent-gold);">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>الأمن السيبراني وحماية البُنى</h4>
+                <p>حماية شاملة للأصول الرقمية والشبكات ضد الاختراقات والهجمات السيبرانية المتقدمة.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> تقييم الثغرات واختبار الاختراق</li>
+                    <li><i class="fa-solid fa-check"></i> تأمين البنية السحابية وشبكات المؤسسات</li>
+                    <li><i class="fa-solid fa-check"></i> استراتيجيات الاستجابة السريعة للحوادث</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-code"></i>
+                <h4>تطوير التطبيقات والمنصات السحابية</h4>
+                <p>بناء وتطوير تطبيقات الويب والهواتف المحمولة المعمارية العالية الأداء والقابلة للتوسع.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> تطبيقات الويب المتكاملة (Vanilla & Modern JS)</li>
+                    <li><i class="fa-solid fa-check"></i> تطبيقات الهواتف الذكية المخصصة</li>
+                    <li><i class="fa-solid fa-check"></i> إدارة وصيانة الأنظمة السحابية (Docker & Cloud)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
+    </footer>
+
+</body>
+</html>
