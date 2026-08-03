@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الابتكارات والمشاريع | شركة سبأ للتكنولوجيا والابتكار</title>
+    <!-- خطوط Google Fonts (Cairo & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4DBC;
+            --accent-gold: #D4AF37;
+            --dark-bg: #1E293B;
+            --gray-text: #6B7280;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-bg);
+            line-height: 1.7;
+        }
+        /* شريط التنقل العلوي */
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-area i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo-text span {
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+        /* رأس الصفحة الداخلية */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(10,77,188,0.9));
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .page-header h2 span {
+            color: var(--accent-gold);
+        }
+        .page-header p {
+            color: #E2E8F0;
+            font-size: 16px;
+        }
+        /* شبكة المشاريع */
+        .section {
+            padding: 80px 5%;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h3 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .section-title p {
+            color: var(--gray-text);
+            font-size: 16px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-bottom: 4px solid var(--primary-blue);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .project-icon-wrapper {
+            background: linear-gradient(135deg, var(--dark-bg), var(--primary-blue));
+            padding: 40px;
+            text-align: center;
+            color: var(--accent-gold);
+        }
+        .project-icon-wrapper i {
+            font-size: 50px;
+        }
+        .project-info {
+            padding: 30px;
+            flex-grow: 1;
+        }
+        .project-info h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--dark-bg);
+            font-weight: 700;
+        }
+        .project-info p {
+            color: var(--gray-text);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: var(--light-bg);
+            color: var(--primary-blue);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        /* التذييل */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+        footer p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر القائد -->
+    <header>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="logo-text">
+                <h1>شركة سبأ للتكنولوجيا والابتكار</h1>
+                <span>SABA TECHNOLOGY & INNOVATION CO.</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="projects.html" class="active">الابتكارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- رأس الصفحة -->
+    <section class="page-header">
+        <h2>معرض <span>الابتكارات والمشاريع</span></h2>
+        <p>استعراض لأبرز الحلول التقنية والأنظمة الرقمية المستقلة التي قمنا بتطويرها</p>
+    </section>
+
+    <!-- قائمة المشاريع والمنتجات -->
+    <section class="section">
+        <div class="section-title">
+            <h3>منتجاتنا وأنظمتنا الذكية</h3>
+            <p>حلول برمجية متكاملة مصممة بأعلى درجات الكفاءة والأمان السيبراني</p>
+        </div>
+        <div class="projects-grid">
+            <!-- المشروع الأول -->
+            <div class="project-card">
+                <div class="project-icon-wrapper">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="project-info">
+                    <h4>نظام نبأ سبأ (Naba of Saba)</h4>
+                    <p>منصة شبكة تواصل اجتماعي مستقلة بالكامل وآمنة، تم تصميم نموذج بياناتها وهيكل جلسات الخلفية بدقة فائقة لتوفير بيئة رقمية محمية وسريعة لتداول البيانات والمعلومات المشفرة.</p>
+                    <div class="project-tags">
+                        <span class="tag">بنية تحتية مستقلة</span>
+                        <span class="tag">تشفير متقدم</span>
+                        <span class="tag">منصة تفاعلية</span>
+                    </div>
+                </div>
+            </div>
+            <!-- المشروع الثاني -->
+            <div class="project-card" style="border-bottom-color: var(--accent-gold);">
+                <div class="project-icon-wrapper" style="background: linear-gradient(135deg, var(--dark-bg), #0f172a);">
+                    <i class="fa-solid fa-cubes"></i>
+                </div>
+                <div class="project-info">
+                    <h4>بيئة الحاويات السحابية (So-Sha Deployment)</h4>
+                    <p>مشروع بناء وتجهيز خوادم محلية وسحابية معزولة بالاعتماد على بنية الحاويات Docker-Compose، لضمان استضافة فائقة الأمان وسهولة التوسع والتشغيل المستمر للتطبيقات والأنظمة الكبرى بدون توقف.</p>
+                    <div class="project-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">أمن الخوادم</span>
+                        <span class="tag">DevOps</span>
+                    </div>
+                </div>
+            </div>
+            <!-- المشروع الثالث -->
+            <div class="project-card">
+                <div class="project-icon-wrapper">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="project-info">
+                    <h4>نظام لوحات التحكم الذكية (Report Tool Dashboard)</h4>
+                    <p>تطبيق ويب تفاعلي متقدم مصمم ببنية (Offline-First) يعمل بدون الحاجة الدائمة للإنترنت، مزود بنظام تطهير وفلترة البيانات، ونظام نسخ احتياطي محلي، ورسوم بيانية تحليلية متطورة باستخدام Canvas API لمراقبة وإدارة أداء المؤسسات.</p>
+                    <div class="project-tags">
+                        <span class="tag">Vanilla JS</span>
+                        <span class="tag">Canvas API</span>
+                        <span class="tag">Local Storage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
+    </footer>
+
+</body>
+</html>
