@@ -65,12 +65,12 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 20px;
         }
         nav ul li a {
             color: var(--white);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             transition: 0.3s;
         }
@@ -126,7 +126,7 @@
             background-color: var(--white);
             color: var(--dark-bg);
         }
-        /* أقسام الخدمات والابتكار */
+        /* أقسام الخدمات */
         .section {
             padding: 80px 5%;
         }
@@ -139,10 +139,6 @@
             color: var(--primary-blue);
             font-weight: 800;
             margin-bottom: 10px;
-        }
-        .section-title p {
-            color: var(--gray-text);
-            font-size: 16px;
         }
         .grid-3 {
             display: grid;
@@ -166,16 +162,7 @@
             color: var(--accent-gold);
             margin-bottom: 20px;
         }
-        .card h4 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: var(--dark-bg);
-        }
-        .card p {
-            color: var(--gray-text);
-            font-size: 14px;
-        }
-        /* تذييل الصفحة (Footer) */
+        /* تذييل الصفحة */
         footer {
             background-color: var(--dark-bg);
             color: var(--white);
@@ -183,19 +170,13 @@
             text-align: center;
             border-top: 3px solid var(--accent-gold);
         }
-        footer p {
-            font-size: 14px;
-            color: #94A3B8;
-        }
         @media (max-width: 768px) {
             nav ul { display: none; }
-            .hero h2 { font-size: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر القائد -->
     <header>
         <div class="logo-area">
             <i class="fa-solid fa-microchip"></i>
@@ -208,7 +189,7 @@
             <ul>
                 <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="about.html">من نحن</a></li>
-                <li><a href="founder.html" class="active">المؤسس</a></li>
+                <li><a href="departments.html">الأقسام المتخصصة</a></li>
                 <li><a href="services.html">الخدمات</a></li>
                 <li><a href="projects.html">الابتكارات</a></li>
                 <li><a href="contact.html">تواصل معنا</a></li>
@@ -216,7 +197,6 @@
         </nav>
     </header>
 
-    <!-- واجهة البطل -->
     <section class="hero">
         <h2>نبتكر اليوم .. <span>لنصنع الغد</span></h2>
         <p>نقدم حلولاً تقنية متطورة ومستدامة تواكب احتياجات عملائنا وتحقق لهم التميز والريادة في عصر التحول الرقمي والذكاء الاصطناعي.</p>
@@ -226,32 +206,28 @@
         </div>
     </section>
 
-    <!-- قطاع الخدمات التقنية -->
     <section class="section">
         <div class="section-title">
             <h3>مجالات الابتكار والحلول الذكية</h3>
-            <p>نصمم مستقبل المؤسسات عبر بنية تحتية رقمية فائقة الأمان والاعتمادية</p>
         </div>
         <div class="grid-3">
             <div class="card">
                 <i class="fa-solid fa-brain"></i>
-                <h4>الذكاء الاصطناعي وتحليل البيانات</h4>
-                <p>نطور خوارزميات ذكية ونظم أتمتة متقدمة لتحليل البيانات الضخمة ودعم متخذي القرار بكفاءة عالية.</p>
+                <h4>الذكاء الاصطناعي</h4>
+                <p>تطوير خوارزميات ذكية ونظم أتمتة متقدمة لدعم اتخاذ القرار.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-shield-halved"></i>
-                <h4>الأمن السيبراني وحماية البُنى</h4>
-                <p>نوفر دروعاً أمنية محصنة وحلول استباقية لاكتشاف الثغرات وتأمين شبكات المؤسسات ضد الهجمات الرقمية.</p>
+                <h4>الأمن السيبراني</h4><p>دروع أمنية محصنة وحلول استباقية لاكتشاف الثغرات وتأمين الشبكات.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-code"></i>
-                <h4>تطوير التطبيقات والمنصات السحابية</h4>
-                <p>نبني تطبيقات ويب وهواتف ذكية بمعايير أداء عالمية، معتمدة على أفضل الممارسات البرمجية السحابية.</p>
+                <h4>تطوير التطبيقات</h4>
+                <p>بناء تطبيقات ويب وهواتف ذكية بمعايير أداء عالمية.</p>
             </div>
         </div>
     </section>
 
-    <!-- التذييل -->
     <footer>
         <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
     </footer>
