@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أقسام التكنولوجيا والابتكار | شركة سبأ للتكنولوجيا والابتكار</title>
+    <!-- خطوط Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4DBC;
+            --accent-gold: #D4AF37;
+            --dark-bg: #1E293B;
+            --gray-text: #6B7280;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-bg);
+            line-height: 1.7;
+        }
+        /* شريط التنقل العلوي */
+        header {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-area i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .logo-text span {
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+        /* رأس الصفحة الداخلي */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(10,77,188,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 70px 5%;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .page-header h2 span {
+            color: var(--accent-gold);
+        }
+        .page-header p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #E2E8F0;
+        }
+        /* الأقسام وتخطيط الشبكة */
+        .section {
+            padding: 70px 5%;
+        }
+        .grid-departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .dept-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 4px solid var(--primary-blue);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .dept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-right-color: var(--accent-gold);
+        }
+        .dept-icon {
+            font-size: 36px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        .dept-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-bg);
+        }
+        .dept-card p {
+            color: var(--gray-text);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .dept-link {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .dept-link:hover {
+            color: var(--accent-gold);
+        }
+        /* تذييل الصفحة */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+        footer p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .page-header h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="logo-text">
+                <h1>شركة سبأ للتكنولوجيا والابتكار</h1>
+                <span>SABA TECHNOLOGY & INNOVATION CO.</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="departments.html" class="active">الأقسام المتخصصة</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="projects.html">الابتكارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- رأس الصفحة -->
+    <section class="page-header">
+        <h2>أقسامنا التقنية <span>المتخصصة</span></h2>
+        <p>نخبة من الإدارات التخصصية والتشغيلية المكرسة لتقديم أحدث الابتكارات والحلول الرقمية المتكاملة.</p>
+    </section>
+
+    <!-- شبكة الأقسام المتعددة -->
+    <section class="section">
+        <div class="grid-departments">
+            
+            <!-- 1. تقنية المعلومات -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-server"></i></div>
+                    <h4>قسم تقنية المعلومات (IT)</h4>
+                    <p>إدارة وبناء البنية التحتية للشبكات، ودعم الأنظمة التقنية، وتوفير الدعم الفني المستمر لضمان استمرارية الأعمال.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 2. الأمن السيبراني -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>قسم الأمن السيبراني</h4>
+                    <p>تأمين الأنظمة والبيانات الرقمية ضد الاختراقات، إجراء اختبارات الاختراق المتقدمة، ووضع استراتيجيات الحماية السيبرانية.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 3. الذكاء الاصطناعي والبيانات الضخمة -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h4>قسم الذكاء الاصطناعي والبيانات</h4>
+                    <p>تطوير خوارزميات التعلم الآلي، تحليل البيانات الضخمة، وبناء النماذج التنبؤية لدعم اتخاذ القرار المؤسسي.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 4. تطوير البرمجيات والتطبيقات -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-code"></i></div>
+                    <h4>قسم تطوير البرمجيات والتطبيقات</h4>
+                    <p>تصميم وتطوير تطبيقات الويب والهواتف الذكية (Android & iOS) بأحدث التقنيات البرمجية والأداء العالي.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 5. الحوسبة السحابية -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h4>قسم الحوسبة السحابية</h4>
+                    <p>نقل وتهيئة وإدارة البنى التحتية على السحابة، وضمان الموثوقية والتوسع المرن للأنظمة والخدمات الرقمية.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 6. التصميم الجرافيكي وتجربة المستخدم (UI/UX) -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h4>قسم التصميم وتجربة المستخدم</h4>
+                    <p>ابتكار واجهات مستخدم مذهلة، تصميم الهويات البصرية للشركات، وضمان تجربة تفاعل سلسة وجذابة للمستخدمين.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 7. إنترنت الأشياء والأنظمة المدمجة -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h4>قسم إنترنت الأشياء (IoT)</h4>
+                    <p>ربط الأجهزة الذكية بالإنترنت، وتصميم الأنظمة المدمجة وحلول المدن والمنازل الذكية المبتكرة.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 8. التسويق الرقمي ونمو الأعمال -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>قسم التسويق الرقمي ونمو الأعمال</h4>
+                    <p>صياغة استراتيجيات التسويق التقني، إدارة الحملات الرقمية، وتحقيق أعلى عائد استثماري ونمو للمشاريع التقنية.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 9. تقنية البلوكشين والحلول اللامركزية -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-cube"></i></div>
+                    <h4>قسم البلوكشين والحلول اللامركزية</h4>
+                    <p>تطوير العقود الذكية وبناء حلول رقمية آمنة وشفافة قائمة على تقنية السلسلة الكتلية لمختلف القطاعات.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 10. البحث والتطوير (R&D) -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h4>قسم البحث والتطوير (R&D)</h4>
+                    <p>استكشاف التقنيات الناشئة، إجراء التجارب الابتكارية، وتحويل الأفكار الرائدة إلى منتجات تكنولوجية تجارية قابلة للتطبيق.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 11. إدارة المشاريع التقنية (PMO) -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h4>قسم إدارة المشاريع التقنية</h4>
+                    <p>تخطيط ومتابعة تنفيذ المشاريع التقنية وفق المنهجيات الرشيقة (Agile/Scrum) لضمان التسليم في الوقت المحدد وبأعلى جودة.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+            <!-- 12. الدعم الفني وخدمة العملاء -->
+            <div class="dept-card">
+                <div>
+                    <div class="dept-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h4>قسم الدعم الفني وخدمة العملاء</h4>
+                    <p>تقديم خدمات مساندة احترافية على مدار الساعة لضمان رضا العملاء وحل أية إشكاليات تقنية بكفاءة وسرعة فائقة.</p>
+                </div>
+                <a href="contact.html" class="dept-link">اكتشف المزيد <i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - شركة سبأ للتكنولوجيا والابتكار (Saba Technology & Innovation Co.)</p>
+    </footer>
+
+</body>
+</html>
